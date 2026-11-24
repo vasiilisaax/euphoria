@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Euphoria — сериал HBO. Сюжет, актёры, трейлер и интерактивный квиз «Кто ты из Эйфории» в неоновой фиолетовой эстетике.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0712">
+  <title>Euphoria — лендинг сериала HBO</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#hero">Перейти к содержимому</a>
+
+  <!-- ======================= ШАПКА ======================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#hero" aria-label="CINEMA — наверх">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+             stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <rect x="2.5" y="3" width="19" height="18" rx="2.5"/>
+          <path d="M7 3v18M17 3v18M2.5 12h19M2.5 7.5H7M2.5 16.5H7M17 7.5h4.5M17 16.5h4.5"/>
+        </svg>
+        <span class="logo-text">CINEMA</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a class="nav-link is-active" href="#hero">О сериале</a>
+        <a class="nav-link" href="#cast">Актёры</a>
+        <a class="nav-link" href="#story">Сюжет</a>
+        <a class="nav-link" href="#quiz">Квиз</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="profile-btn" type="button" aria-label="Личный кабинет">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.6"/>
+            <path d="M5 20c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/>
+          </svg>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню"
+                aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= ОБЛОЖКА ======================= -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <p class="hero-kicker">США · HBO · 2019–2026 · 3 сезона · 24 эпизода</p>
+        <h1 class="hero-title">EUPHORIA</h1>
+        <p class="hero-text">
+          17-летняя Ру Беннетт возвращается домой после лечения в реабилитационной
+          клинике. Не имея ни малейшего желания завязывать с наркотиками, она
+          немедленно берётся за старое. На вечеринке Ру обращает внимание на недавно
+          приехавшую в их пригород ровесницу Джулс, и это знакомство становится
+          началом большой дружбы.
+        </p>
+        <div class="hero-genres" aria-label="Жанры">
+          <span class="genre-chip">драма</span>
+          <span class="genre-chip">мелодрама</span>
+          <span class="genre-chip">криминал</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="trailer-btn" type="button">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Смотреть трейлер
+          </button>
+          <span class="age-chip" title="Возрастное ограничение">18+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= АКТЁРСКИЙ СОСТАВ ======================= -->
+    <section class="section cast" id="cast">
+      <div class="container">
+        <h2 class="section-title reveal">Актёрский состав</h2>
+      </div>
+
+      <div class="film-strip" aria-hidden="true"></div>
+
+      <div class="cast-band reveal">
+        <div class="container cast-shell">
+          <button class="carousel-arrow" id="cast-prev" type="button" aria-label="Предыдущие актёры">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="cast-viewport" id="cast-viewport" tabindex="0"
+               aria-roledescription="карусель" aria-label="Актёры сериала — листайте стрелками, клик по карточке открывает биографию">
+            <ul class="cast-track" id="cast-track">
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="zendaya" aria-haspopup="dialog"
+                        aria-label="Зендея: подробнее об актрисе"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=eef59eee3a39fcc2a2a926577da3b60a_l-5876503-images-thumbs&n=13"
+                         alt="Зендея" width="400" height="400" loading="lazy" data-ph="З">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Зендея</span>
+                    <span class="cast-role">(Ру Беннетт)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="hunter" aria-haspopup="dialog"
+                        aria-label="Хантер Шафер: подробнее об актрисе"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=80716df8c180e4517305ac3f2bdb44d5_l-5236434-images-thumbs&n=13"
+                         alt="Хантер Шафер" width="400" height="400" loading="lazy" data-ph="ХШ">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Хантер Шафер</span>
+                    <span class="cast-role">(Джулс Вон)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="jacob" aria-haspopup="dialog"
+                        aria-label="Джейкоб Элорди: подробнее об актёре"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=890a1c40c705ac0bfb0479605919fbaa_l-3858447-images-thumbs&n=13"
+                         alt="Джейкоб Элорди" width="400" height="400" loading="lazy" data-ph="ДЭ">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Джейкоб Элорди</span>
+                    <span class="cast-role">(Нэйт Джейкобс)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="alexa" aria-haspopup="dialog"
+                        aria-label="Алекса Деми: подробнее об актрисе"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=b8a07750506d8bd7bc7ca164b66f88f3_l-4936065-images-thumbs&n=13"
+                         alt="Алекса Деми" width="400" height="400" loading="lazy" data-ph="АД">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Алекса Деми</span>
+                    <span class="cast-role">(Мэдди Перес)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="barbie" aria-haspopup="dialog"
+                        aria-label="Барби Феррейра: подробнее об актрисе"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=2c644a99aea4529d33c85b5fd632512c_l-7016539-images-thumbs&n=13"
+                         alt="Барби Феррейра" width="400" height="400" loading="lazy" data-ph="БФ">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Барби Феррейра</span>
+                    <span class="cast-role">(Кэт Эрнандес)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="sydney" aria-haspopup="dialog"
+                        aria-label="Сидни Суини: подробнее об актрисе"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=8b912351b354f309059efa85e0daa549_l-5118143-images-thumbs&n=13"
+                         alt="Сидни Суини" width="400" height="400" loading="lazy" data-ph="СС">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Сидни Суини</span>
+                    <span class="cast-role">(Кэсси Говард)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="javon" aria-haspopup="dialog"
+                        aria-label="Джейвон Уолтон: подробнее об актёре"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=12110a23a27c1e73ce89c6fb1007e1c0_sr-8492261-images-thumbs&n=13"
+                         alt="Джейвон Уолтон" width="400" height="400" loading="lazy" data-ph="ДУ">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Джейвон Уолтон</span>
+                    <span class="cast-role">(Эштрей)</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="cast-card">
+                <button class="cast-open" type="button" data-actor="angus" aria-haspopup="dialog"
+                        aria-label="Ангус Клауд: подробнее об актёре"></button>
+                <figure>
+                  <div class="cast-photo">
+                    <img src="https://avatars.mds.yandex.net/i?id=b219d5a8bb7fd007fa64118ec7acc3ac_l-10121887-images-thumbs&n=13"
+                         alt="Ангус Клауд" width="400" height="400" loading="lazy" data-ph="АК">
+                    <span class="cast-info" aria-hidden="true">i</span>
+                  </div>
+                  <figcaption>
+                    <span class="cast-name">Ангус Клауд</span>
+                    <span class="cast-role">(Феско)</span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel-arrow" id="cast-next" type="button" aria-label="Следующие актёры">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="dots" id="cast-dots" aria-label="Навигация по актёрам"></div>
+      </div>
+
+      <div class="film-strip" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======================= СЮЖЕТ ======================= -->
+    <section class="story" id="story">
+      <div class="container">
+        <h2 class="section-title reveal">Сюжет</h2>
+        <p class="story-intro reveal">Три сцены, которые задают тон всему сериалу</p>
+        <nav class="story-chapters reveal" aria-label="Главы сюжета">
+          <a class="chapter-chip is-active" href="#story-1">01 · Зависимость</a>
+          <a class="chapter-chip" href="#story-2">02 · Встреча</a>
+          <a class="chapter-chip" href="#story-3">03 · Жестокость</a>
+        </nav>
+      </div>
+
+      <!-- Глава 1 -->
+      <article class="story-block story-addiction" id="story-1">
+        <div class="story-media">
+          <div class="media-frame" style="--img:url('https://images-s.kinorium.com/movie/shot/1684006/w1500_37585949.jpg')">
+            <img src="https://images-s.kinorium.com/movie/shot/1684006/w1500_37585949.jpg"
+                 alt="Ру Беннетт после выхода из реабилитационного центра" width="1500" height="938" loading="lazy">
+            <span class="media-ghost" aria-hidden="true"></span>
+            <span class="media-pulse" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="story-scrim" aria-hidden="true"></div>
+        <span class="bokeh b1" aria-hidden="true"></span>
+        <span class="bokeh b2" aria-hidden="true"></span>
+        <span class="bokeh b3" aria-hidden="true"></span>
+
+        <div class="story-grid">
+          <div class="story-copy">
+            <p class="story-kicker"><span class="num">01</span> зависимость</p>
+            <h3 class="story-title">Возвращение, которое ничего не меняет</h3>
+            <p class="story-text">
+              17-летняя Ру Беннетт возвращается домой из реабилитационного центра
+              для подростков с наркозависимостью. Но она не планирует завязывать:
+              сразу после выхода из клиники покупает вещества у своего друга Феско.
+            </p>
+            <p class="media-hint">сезон 1 · мир плывёт — как в голове Ру</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Глава 2 -->
+      <article class="story-block story-jules" id="story-2">
+        <button class="story-media story-toggle" id="jules-toggle" type="button" aria-pressed="false"
+                aria-label="Кадр с Джулс: включить цветное изображение">
+          <span class="media-frame">
+            <img src="https://images-s.kinorium.com/movie/shot/1684006/w1500_58030619.jpg"
+                 alt="Джулс Вон — новая девушка в пригороде" width="1500" height="938" loading="lazy">
+            <span class="sparkle s1" aria-hidden="true">✦</span>
+            <span class="sparkle s2" aria-hidden="true">✦</span>
+            <span class="sparkle s3" aria-hidden="true">✦</span>
+            <span class="sparkle s4" aria-hidden="true">✦</span>
+            <span class="heart h1" aria-hidden="true">♥</span>
+            <span class="heart h2" aria-hidden="true">♥</span>
+            <span class="heart h3" aria-hidden="true">♥</span>
+          </span>
+        </button>
+        <div class="story-scrim" aria-hidden="true"></div>
+        <span class="bokeh b1" aria-hidden="true"></span>
+        <span class="bokeh b2" aria-hidden="true"></span>
+        <span class="bokeh b3" aria-hidden="true"></span>
+
+        <div class="story-grid">
+          <div class="story-copy">
+            <p class="story-kicker"><span class="num">02</span> встреча</p>
+            <h3 class="story-title">Джулс — цвет в чёрно-белом мире</h3>
+            <p class="story-text">
+              В пригород переезжает новая девушка — Джулс Вон (Хантер Шафер).
+              На вечеринке Ру обращает на неё внимание, и это знакомство становится
+              поворотным моментом: между девушками завязывается глубокая, сложная дружба.
+            </p>
+            <p class="media-hint">наведи курсор или коснись экрана — мир Ру обретает цвет ✨</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Глава 3 -->
+      <article class="story-block story-nate" id="story-3">
+        <div class="story-media">
+          <div class="media-frame">
+            <img src="https://i.pinimg.com/originals/85/a3/17/85a317114f48666ee44df34e6262a964.jpg?nii=t"
+                 alt="Нэйт Джейкобс — холодная жестокость" width="1500" height="938" loading="lazy">
+            <span class="media-cold" aria-hidden="true"></span>
+            <span class="media-flicker" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="story-scrim" aria-hidden="true"></div>
+        <span class="bokeh b1" aria-hidden="true"></span>
+        <span class="bokeh b2" aria-hidden="true"></span>
+        <span class="bokeh b3" aria-hidden="true"></span>
+
+        <div class="story-grid">
+          <div class="story-copy">
+            <p class="story-kicker"><span class="num">03</span> жестокость</p>
+            <h3 class="story-title">Холодная ярость Нэйта</h3>
+            <p class="story-text">
+              Нейт совершает жестокий поступок: находит парня, с которым была Мэдди,
+              жестоко избивает его и вынуждает ложно признаться в изнасиловании.
+              После этого он с холодным спокойствием идёт в душ, а затем отправляется
+              к Мэдди — дарит ей жуткое платье и издевается над ней.
+            </p>
+            <p class="media-hint">сезон 1 · за спокойствием прячется ярость</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ======================= КВИЗ «ТВОЯ ЭЙФОРИЯ» ======================= -->
+    <section class="section quiz" id="quiz">
+      <div class="container">
+        <h2 class="section-title reveal">Твоя эйфория</h2>
+        <p class="quiz-intro reveal">Шесть вопросов — и неон покажет, кто ты в этой истории</p>
+
+        <div class="quiz-board reveal" id="quiz-board">
+          <span class="glit g1" aria-hidden="true"></span>
+          <span class="glit g2" aria-hidden="true"></span>
+          <span class="glit g3" aria-hidden="true"></span>
+          <span class="glit g4" aria-hidden="true"></span>
+          <span class="glit g5" aria-hidden="true"></span>
+          <span class="glit g6" aria-hidden="true"></span>
+
+          <div class="quiz-progress" aria-hidden="true"><span id="quiz-bar"></span></div>
+
+          <!-- Шаг вопроса -->
+          <div class="quiz-step" id="quiz-step">
+            <p class="quiz-count" id="quiz-count">Вопрос 1 / 6</p>
+            <h3 class="quiz-question" id="quiz-question" tabindex="-1"></h3>
+            <div class="quiz-options" id="quiz-options" role="group" aria-label="Варианты ответа"></div>
+            <div class="quiz-nav">
+              <button class="quiz-back" id="quiz-back" type="button">← Назад</button>
+              <span class="quiz-hint">выбери ответ — палитра подсветит того, кто в тебе ближе</span>
+            </div>
+          </div>
+
+          <!-- Результат -->
+          <div class="quiz-result" id="quiz-result" hidden>
+            <div class="result-burst" id="result-burst" aria-hidden="true"></div>
+            <p class="result-kicker">твой персонаж</p>
+            <h3 class="result-name" id="result-name" tabindex="-1"></h3>
+            <p class="result-actor" id="result-actor"></p>
+            <div class="result-pct"><span id="result-pct">0%</span><small>совпадение</small></div>
+            <p class="result-manifest" id="result-manifest"></p>
+            <div class="result-traits" id="result-traits"></div>
+            <div class="result-duo">
+              <div class="duo-card"><span class="duo-label">твоя сила</span><p id="result-strength"></p></div>
+              <div class="duo-card shadow"><span class="duo-label">твоя тень</span><p id="result-shadow"></p></div>
+            </div>
+            <div class="result-chart">
+              <p class="chart-title">Расклад по зрителям</p>
+              <div id="chart-rows"></div>
+            </div>
+            <div class="result-actions">
+              <button class="btn btn-primary" id="quiz-save" type="button">Скачать открытку</button>
+              <button class="btn btn-ghost" id="quiz-copy" type="button">Скопировать результат</button>
+              <button class="btn btn-ghost" id="quiz-restart" type="button">Пройти заново</button>
+            </div>
+          </div>
+
+          <p class="sr-live" id="quiz-live" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= ФУТЕР ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-social">
+          <p class="footer-label">Мы в соцсетях</p>
+          <div class="social-row">
+            <button class="social-btn" type="button" data-network="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+              </svg>
+            </button>
+            <button class="social-btn" type="button" data-network="YouTube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12z"/>
+              </svg>
+            </button>
+            <button class="social-btn" type="button" data-network="X" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+                <path d="M17.8 3h3l-6.6 7.6L22 21h-6.1l-4.8-6.3L5.6 21h-3l7.1-8.1L2 3h6.3l4.3 5.7zm-1.1 16.2h1.7L7.4 4.7H5.6z"/>
+              </svg>
+            </button>
+            <button class="social-btn" type="button" data-network="Facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-apps">
+          <p class="footer-label">Приложение для:</p>
+          <div class="app-row">
+            <button class="app-btn" type="button" data-store="Android">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path fill="currentColor" d="M17.6 9.5l1.6-2.7a.4.4 0 0 0-.7-.4l-1.6 2.8a9.7 9.7 0 0 0-9.8 0L5.5 6.4a.4.4 0 0 0-.7.4l1.6 2.7A8.8 8.8 0 0 0 2 16h20a8.8 8.8 0 0 0-4.4-6.5z"/>
+                <circle cx="7.5" cy="12.6" r="1" fill="#0f0a1c"/>
+                <circle cx="16.5" cy="12.6" r="1" fill="#0f0a1c"/>
+              </svg>
+              Android
+            </button>
+            <button class="app-btn" type="button" data-store="iOS">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M16.7 12.9c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.6 2 1-.1 1.4-.7 2.6-.7s1.6.7 2.6.7c1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.3-.9-2.3-3zM14.8 6.6c.6-.7 1-1.7.9-2.6-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5 1 .1 1.9-.5 2.5-1.2z"/>
+              </svg>
+              iOS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="logo small" href="#hero" aria-label="CINEMA — наверх">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+               stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <rect x="2.5" y="3" width="19" height="18" rx="2.5"/>
+            <path d="M7 3v18M17 3v18M2.5 12h19M2.5 7.5H7M2.5 16.5H7M17 7.5h4.5M17 16.5h4.5"/>
+          </svg>
+          <span class="logo-text">CINEMA</span>
+        </a>
+        <p class="copyright">© <span id="year">2026</span> CINEMA online · фан-лендинг сериала «Euphoria» (HBO)</p>
+        <span class="age-badge" title="Возрастное ограничение">18+</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= МОДАЛКА ТРЕЙЛЕРА ======================= -->
+  <div class="modal" id="trailer-modal" role="dialog" aria-modal="true" aria-labelledby="trailer-modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-window trailer-window">
+      <button class="modal-close" type="button" data-close aria-label="Закрыть трейлер">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="player">
+        <div class="player-frame" id="player-frame"></div>
+        <div class="countdown" id="countdown" aria-hidden="true">
+          <span id="countdown-num">3</span>
+        </div>
+        <div class="player-fallback" id="player-fallback" hidden>
+          <p>Встроенный плеер не загрузился. Откройте трейлер напрямую на VK Видео:</p>
+          <a class="btn btn-primary" href="https://vkvideo.ru/video-53921002_456241281" target="_blank" rel="noopener">
+            Смотреть на VK Видео
+          </a>
+        </div>
+      </div>
+      <div class="player-foot">
+        <h3 id="trailer-modal-title">Euphoria — трейлер</h3>
+        <a class="vk-link" href="https://vkvideo.ru/video-53921002_456241281" target="_blank" rel="noopener">
+          Открыть на VK Видео ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= МОДАЛКА АКТЁРА ======================= -->
+  <div class="modal" id="actor-modal" role="dialog" aria-modal="true" aria-labelledby="actor-name" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-window actor-window">
+      <button class="modal-close" type="button" data-close aria-label="Закрыть карточку актёра">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="actor-grid">
+        <div class="actor-photo"><img id="actor-photo" src="" alt=""></div>
+        <div class="actor-info">
+          <p class="actor-kicker">в главных ролях</p>
+          <h3 id="actor-name"></h3>
+          <p class="actor-role" id="actor-role"></p>
+          <p class="actor-bio" id="actor-bio"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
